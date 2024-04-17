@@ -17,7 +17,7 @@ duckdb.query("""CREATE OR REPLACE TEMPORARY TABLE jamaican_car_listings
 table_name = 'jamaican_car_listings'
 schema = str(duckdb.query("Select * from jamaican_car_listings limit 5;").description)
 
-st.title("J'can Auto Market Analyst🚗📈🤖")
+st.title("AutoAnalyzerJA 🚗📈🤖")
 
 # Initialize chat history
 if "messages" not in st.session_state:
