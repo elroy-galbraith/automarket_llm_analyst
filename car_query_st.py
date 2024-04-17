@@ -21,6 +21,8 @@ st.title("AutoAnalyzerJA 🚗📈🤖")
 
 # Initialize chat history
 if "messages" not in st.session_state:
+    with st.chat_message("assistant"):
+        st.markdown("How can I help you in analyzing the Jamaican car market?")
     st.session_state.messages = []
     st.session_state.thread_id = None
 
