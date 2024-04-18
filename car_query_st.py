@@ -69,6 +69,7 @@ prompt = ChatPromptTemplate.from_messages(
                         <relevant rule>Often you will want to do fuzzy searches like using the % symbol to control for slight differences</relevant rule>
                         <relevant rule>You should __interpret__ the results of the queries and respond naturally to the user</releant rule>
                         <relevant rule>You can simply omit the explanation of the query in your **final** response</relevant rule>
+                        <IMPERATIVE><relevant rule>Your final answer should make NO REFERENCE to the query</relevant answer></IMPERATIVE>
                         <table_name>{table_name}</table_name>
                         <schema>{schema}</schema>"""
         ),
