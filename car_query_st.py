@@ -1,14 +1,13 @@
 import streamlit as st
 import duckdb
-from langchain_anthropic import ChatAnthropic
+from langchain_ollama.chat_models import ChatOllama
 from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.tools import tool
 from langchain_core.messages import AIMessage, HumanMessage
 from tenacity import retry, stop_after_attempt, wait_fixed
 
-llm = ChatAnthropic(model=st.secrets["ANTHROPIC"]["MODEL_NAME"],
-                    api_key=st.secrets["ANTHROPIC"]["ANTHROPIC_API_KEY"])
+llm = ChatOllama(model="llama3.1")
 #Create temp table
 duckdb.query("""CREATE OR REPLACE TEMPORARY TABLE jamaican_car_listings
               as
